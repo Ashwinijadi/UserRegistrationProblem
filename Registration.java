@@ -6,18 +6,18 @@ import java.util.regex.Pattern;
 public class Registration {
 public static void main(String[] args) {
 	Scanner scanner=new Scanner(System.in);
-    System.out.println("Enter your Email");
+    System.out.println("Enter your PhoneNumber");
     String name=scanner.nextLine();
     System.out.println(name);
-    String emailPattern="[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}";
-    Pattern Pattern2=Pattern.compile(emailPattern);
-    Matcher m1= Pattern2.matcher(name);
-    System.out.println("Match - "+m1.matches());
-    if(m1.matches()==true)
+    String PhoneNumberPattern="^[1-9]{2}\\s[1-9]{10}$";
+    Pattern Pattern3=Pattern.compile(PhoneNumberPattern);
+    Matcher m2= Pattern3.matcher(name);
+    System.out.println("Match - "+m2.matches());
+    if(m2.matches()==true)
     {
- 	   System.out.println("your Email is valid");
+ 	   System.out.println("your PhoneNumber is valid");
     }
     else {
- 	   System.out.println("your Email is not valid");}
+ 	   System.out.println("your PhoneNumber is not valid");}
 }
 }
