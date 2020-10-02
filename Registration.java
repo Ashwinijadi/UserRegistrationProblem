@@ -9,7 +9,7 @@ public static void main(String[] args) {
     System.out.println("Enter your Username");
     String name=scanner.nextLine();
     System.out.println(name);
-    String usernamePattern="^[1-9A-Za-z/@/#]{8}$";
+    String usernamePattern="^(?=.*[A-Z])[1-9A-Za-z/@/#]{8,}$";
     Pattern Pattern3=Pattern.compile(usernamePattern);
     Matcher m2= Pattern3.matcher(name);
     System.out.println("Match - "+m2.matches());
@@ -19,5 +19,5 @@ public static void main(String[] args) {
     }
     else {
  	   System.out.println("your Username is not valid");}
-}
+     }
 }
